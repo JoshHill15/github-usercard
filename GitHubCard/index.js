@@ -12,7 +12,7 @@
 //       })
 //     })
 //   })
-const followersArray = ["GodSeer", "1sdc0d3r", "phil-mac", "MarFan", "DustinG98"];
+const followersArray = ["GodSeer", "1sdc0d3r", "phil-mac", "MarFan", "DustinG98", "Code4Blessings"];
 
 followersArray.forEach(cv => {
   axios.get("https://api.github.com/users/" + cv)
@@ -24,7 +24,7 @@ followersArray.forEach(cv => {
 })
 axios.get("https://api.github.com/users/JoshHill15")
   .then(response => {
-    console.log(response.data);
+    console.log(response);
     githubCreator(response.data)
 
     })
