@@ -91,7 +91,6 @@ function githubCreator(obj){
 
   card.append(img, cardInfo);
   cardInfo.append(h3, username, location, profile, followers, following, bio);
-  profile.append(link);
 
   card.classList.add("card");
   cardInfo.classList.add("card-info");
@@ -102,13 +101,15 @@ function githubCreator(obj){
   h3.textContent = obj.name;
   username.textContent = obj.login;
   location.textContent = `Location: ${obj.location}`;
-  profile.textContent = "Profile:";
   link.setAttribute("href", obj.html_url);
+  link.textContent = obj.html_url;
+  profile.textContent = "Profile:";
   followers.textContent = obj.followers;
   following.textContent = obj.following;
   bio.textContent = obj.bio;
 
   bigCard.append(card)
+  profile.appendChild(link);
 
   return card;
 
